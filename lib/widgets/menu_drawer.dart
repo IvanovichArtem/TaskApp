@@ -60,7 +60,36 @@ class MenuDrawer extends StatelessWidget {
                 ),
                 SizedBox(width: 10)
               ],
-            )
+            ),
+            Spacer(),
+            Row(
+              children: [
+                SizedBox(width: 15),
+                Row(children: [
+                  Wrap(spacing: 8, children: [
+                    Icon(
+                      Icons.add_box_outlined,
+                      color: Colors.white,
+                    ),
+                    Text(
+                      'Добавить',
+                      style: GoogleFonts.roboto(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15),
+                    )
+                  ])
+                ]),
+                Spacer(),
+                Icon(
+                  Icons.list_rounded,
+                  color: Colors.grey,
+                  size: 28,
+                ),
+                SizedBox(width: 20)
+              ],
+            ),
+            SizedBox(height: 15)
           ],
         ),
       ),
