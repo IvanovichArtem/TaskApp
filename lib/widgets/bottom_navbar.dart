@@ -47,7 +47,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
           icon: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20.0),
             child: Icon(
-              Icons.rotate_right_rounded,
+              Icons.emoji_events_rounded,
               size: _selectedIndex == 2 ? 36 : 30,
             ),
           ),
