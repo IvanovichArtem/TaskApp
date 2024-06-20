@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:google_fonts/google_fonts.dart';
+import 'menu_element.dart';
 
 class MenuDrawer extends StatelessWidget {
   const MenuDrawer({
@@ -61,7 +62,22 @@ class MenuDrawer extends StatelessWidget {
                 SizedBox(width: 10)
               ],
             ),
-            Spacer(),
+            SizedBox(height: 30),
+            Expanded(
+                child: ListView(
+              padding: EdgeInsets.all(6),
+              children: [
+                MenuElement(name: 'Привет'),
+                MenuElement(name: 'Привет'),
+                MenuElement(name: 'Привет'),
+                MenuElement(name: 'Привет'),
+                MenuElement(name: 'Привет'),
+                MenuElement(name: 'Привет'),
+                MenuElement(name: 'Привет'),
+                MenuElement(name: 'Привет'),
+              ],
+            )),
+            SizedBox(height: 60),
             Row(
               children: [
                 SizedBox(width: 15),

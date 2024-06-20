@@ -1,17 +1,44 @@
 import 'package:flutter/material.dart';
 
 import 'pages/task.dart';
+import 'pages/task_by_date.dart';
+import 'pages/habit.dart';
+import 'package:pick/widgets/bottom_navbar.dart';
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  int _selectedIndex = 0;
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
+  final List<Widget> _pages = [
+    Task(),
+    TaskByDate(),
+    Habit(),
+    Habit(),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        routes: {
-          '/': (context) => const Task(),
-        },
+        home: Scaffold(
+          body: _pages[_selectedIndex],
+          bottomNavigationBar: BottomNavBar(
+            selectedIndex: _selectedIndex,
+            onItemTapped: _onItemTapped,
+          ),
+        ),
         initialRoute: '/',
         theme: ThemeData(
             floatingActionButtonTheme: FloatingActionButtonThemeData(

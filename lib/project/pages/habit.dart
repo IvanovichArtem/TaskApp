@@ -3,18 +3,17 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'package:pick/widgets/menu_drawer.dart';
 
-class Task extends StatefulWidget {
-  const Task({super.key});
+class Habit extends StatefulWidget {
+  const Habit({super.key});
 
   @override
-  State<Task> createState() => _TaskState();
+  State<Habit> createState() => _HabitState();
 }
 
-class _TaskState extends State<Task> {
+class _HabitState extends State<Habit> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: TaskAppBar(),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
             // Действие при нажатии на кнопку
