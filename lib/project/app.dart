@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'pages/task.dart';
 import 'pages/task_by_date.dart';
 import 'pages/habit.dart';
+import 'pages/matrix.dart';
 import 'package:pick/widgets/bottom_navbar.dart';
 
 class MyApp extends StatefulWidget {
@@ -25,6 +26,7 @@ class _MyAppState extends State<MyApp> {
     Task(),
     TaskByDate(),
     Habit(),
+    Matrix(),
     Habit(),
   ];
 
@@ -41,17 +43,19 @@ class _MyAppState extends State<MyApp> {
         ),
         initialRoute: '/',
         theme: ThemeData(
+            splashFactory: NoSplash.splashFactory,
             floatingActionButtonTheme: FloatingActionButtonThemeData(
                 iconSize: 32,
                 shape: CircleBorder(),
                 foregroundColor: Colors.white,
                 backgroundColor: Color.fromRGBO(35, 47, 86, 0.906)),
-            scaffoldBackgroundColor: Color.fromRGBO(221, 222, 224, 25),
+            scaffoldBackgroundColor: Color.fromRGBO(221, 222, 224, 1),
             bottomNavigationBarTheme: BottomNavigationBarThemeData(
-              backgroundColor: Color.fromRGBO(221, 222, 224, 0),
+              backgroundColor: Color.fromRGBO(221, 222, 224, 1),
               elevation: 0,
+              type: BottomNavigationBarType.fixed,
             ),
             appBarTheme: AppBarTheme(
-                backgroundColor: Color.fromRGBO(221, 222, 224, 0))));
+                backgroundColor: Color.fromRGBO(221, 222, 224, 1))));
   }
 }

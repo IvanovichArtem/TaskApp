@@ -3,18 +3,18 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'package:pick/widgets/menu_drawer.dart';
 
-class Habit extends StatefulWidget {
-  const Habit({super.key});
+class Matrix extends StatefulWidget {
+  const Matrix({super.key});
 
   @override
-  State<Habit> createState() => _HabitState();
+  State<Matrix> createState() => _MatrixState();
 }
 
-class _HabitState extends State<Habit> {
+class _MatrixState extends State<Matrix> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: TaskAppBar(),
+        appBar: MatrixAppBar(),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
             // Действие при нажатии на кнопку
@@ -26,8 +26,8 @@ class _HabitState extends State<Habit> {
   }
 }
 
-class TaskAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const TaskAppBar({Key? key}) : super(key: key);
+class MatrixAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const MatrixAppBar({Key? key}) : super(key: key);
 
   @override
   Size get preferredSize => Size.fromHeight(kToolbarHeight);
@@ -37,20 +37,12 @@ class TaskAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       automaticallyImplyLeading: false,
       title: Text(
-        'Привычка',
+        'Матрица Эйзенхауэра',
         style: GoogleFonts.roboto(fontWeight: FontWeight.bold),
       ),
       actions: [
         IconButton(
-          icon: const Icon(Icons.pie_chart_outline_rounded),
-          onPressed: () {},
-        ),
-        IconButton(
-          icon: const Icon(Icons.event_note_rounded),
-          onPressed: () {},
-        ),
-        IconButton(
-          icon: const Icon(Icons.settings),
+          icon: const Icon(Icons.more_vert_rounded),
           onPressed: () {},
         ),
       ],
