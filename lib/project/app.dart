@@ -4,6 +4,7 @@ import 'pages/task.dart';
 import 'pages/task_by_date.dart';
 import 'pages/habit.dart';
 import 'pages/matrix.dart';
+import 'pages/settings.dart';
 import 'package:pick/widgets/bottom_navbar.dart';
 
 class MyApp extends StatefulWidget {
@@ -27,7 +28,7 @@ class _MyAppState extends State<MyApp> {
     TaskByDate(),
     Habit(),
     Matrix(),
-    Habit(),
+    Settings(),
   ];
 
   @override

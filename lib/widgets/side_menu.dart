@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'menu_element.dart';
 
-class MenuDrawer extends StatelessWidget {
-  const MenuDrawer({
+class SideMenu extends StatelessWidget {
+  const SideMenu({
     super.key,
   });
 

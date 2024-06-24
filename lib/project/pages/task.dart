@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'package:pick/widgets/menu_drawer.dart';
+import 'package:pick/widgets/side_menu.dart';
 
 class Task extends StatefulWidget {
   const Task({super.key});
@@ -22,7 +22,7 @@ class _TaskState extends State<Task> {
           child: Icon(Icons.add),
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
-        drawer: MenuDrawer());
+        drawer: SideMenu());
   }
 }
 
