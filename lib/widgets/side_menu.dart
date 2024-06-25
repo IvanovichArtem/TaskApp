@@ -2,11 +2,35 @@ import 'package:flutter/material.dart';
 
 import 'package:google_fonts/google_fonts.dart';
 import 'menu_element.dart';
+import 'package:pick/services/sqlite_service.dart';
 
-class SideMenu extends StatelessWidget {
-  const SideMenu({
-    super.key,
-  });
+//TODO: Поменять названия, сделать модели, сделать сначала вкладки создания и тп
+class SideMenu extends StatefulWidget {
+  const SideMenu({super.key});
+
+  @override
+  State<SideMenu> createState() => _SideMenuState();
+}
+
+class _SideMenuState extends State<SideMenu> {
+  // All data
+  List<Map<String, dynamic>> myData = [];
+
+  bool _isLoading = true;
+  // This function is used to fetch all data from the database
+  void _refreshData() async {
+    final data = await DatabaseHelper.getItems();
+    setState(() {
+      myData = data;
+      _isLoading = false;
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _refreshData(); // Loading the data when the app starts
+  }
 
   String _truncateText(String text, {int maxLength = 10}) {
     if (text.length <= maxLength) {
@@ -67,14 +91,10 @@ class SideMenu extends StatelessWidget {
                 child: ListView(
               padding: EdgeInsets.all(6),
               children: [
-                MenuElement(name: 'Привет'),
-                MenuElement(name: 'Привет'),
-                MenuElement(name: 'Привет'),
-                MenuElement(name: 'Привет'),
-                MenuElement(name: 'Привет'),
-                MenuElement(name: 'Привет'),
-                MenuElement(name: 'Привет'),
-                MenuElement(name: 'Привет'),
+                for (var item in myData)
+                  MenuElement(
+                    name: item['title'],
+                  ),
               ],
             )),
             SizedBox(height: 60),

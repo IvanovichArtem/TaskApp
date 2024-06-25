@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'pages/task.dart';
-import 'pages/task_by_date.dart';
-import 'pages/habit.dart';
-import 'pages/matrix.dart';
-import 'pages/settings.dart';
+import 'task.dart';
+import 'task_by_date.dart';
+import 'habit.dart';
+import 'matrix.dart';
+import 'settings.dart';
 import 'package:pick/widgets/bottom_navbar.dart';
 
 class MyApp extends StatefulWidget {

@@ -20,6 +20,7 @@ dev_dependencies:
     sdk: flutter
   google_fonts: ^6.2.1
   flutter_lints: ^3.0.0
+  sqflite: any
 
 flutter:
   uses-material-design: true
