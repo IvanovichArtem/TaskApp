@@ -78,7 +78,7 @@ class RomanNumeralIcon extends StatelessWidget {
         numeral,
         style: GoogleFonts.openSans(
           color: Colors.white,
-          fontSize: size / 2, // Размер шрифта для текста
+          fontSize: 10, // Размер шрифта для текста
           fontWeight: FontWeight.bold,
         ),
       ),

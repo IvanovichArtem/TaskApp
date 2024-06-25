@@ -4,7 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'menu_element.dart';
 import 'package:pick/services/sqlite_service.dart';
 
-//TODO: Поменять названия, сделать модели, сделать сначала вкладки создания и тп
 class SideMenu extends StatefulWidget {
   const SideMenu({super.key});
 
@@ -43,7 +42,7 @@ class _SideMenuState extends State<SideMenu> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor: Color.fromRGBO(31, 37, 59, 1),
+      backgroundColor: Color(0xFF1F253B),
       child: Padding(
         padding: EdgeInsets.only(top: 70),
         child: Column(

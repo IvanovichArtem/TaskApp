@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'package:pick/widgets/side_menu.dart';
+import 'package:pick/forms/create_task_form.dart';
 
 class Task extends StatefulWidget {
   const Task({super.key});
@@ -17,7 +18,16 @@ class _TaskState extends State<Task> {
         appBar: TaskAppBar(),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
-            // Действие при нажатии на кнопку
+            showModalBottomSheet(
+              context: context,
+              isScrollControlled: true,
+              builder: (context) => Padding(
+                padding: EdgeInsets.only(
+                  bottom: MediaQuery.of(context).viewInsets.bottom,
+                ),
+                child: CreateTaskForm(),
+              ),
+            );
           },
           child: Icon(Icons.add),
         ),
